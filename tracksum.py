@@ -8,7 +8,7 @@ def sum_length(lengths):
 
 def sec_to_min(sec):
     rem = sec % 60
-    return str(int((sec - rem) / 60)) + ':' + str(int(rem))
+    return f'{str(int((sec - rem) / 60))}:{str(int(rem)):0>2}'
 
 def get_lengths():
     return [length.strip().split(':') for length in sys.argv[1].split('+')]
